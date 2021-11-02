@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+    <!--  heading arranged in a row with linear layout in horizontal orientation  -->
+    <LinearLayout
+        android:id="@+id/heading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--   greeting text aligned horizontally with icons   -->
+        <TextView
+            android:id="@+id/heading_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/good_morning"
+            style="@style/Dark_Textview"
+            android:textSize="18sp"/>
+        <!--   emoji aligned in the heading center   -->
+        <ImageView
+            android:id="@+id/heading_emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitStart"
+            android:layout_weight="2.8"
+            android:src="@drawable/hearts_1" />
+        <!--  emoji aligned horizontally at the end of the heading   -->
+        <ImageView
+            android:id="@+id/heading_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:scaleType="fitEnd"
+            style="@style/Heading_Icon"
+            android:src="@drawable/group_icon" />
+    </LinearLayout>
+    <!--  a searchview taking background color & shape from drawable resource -->
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="search"
+        android:background="@drawable/searchview_background"
+        />
+    <!--  scrollview to extend the view to fit in the content  -->
+    <ScrollView
+        android:id="@+id/page_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_marginTop="20dp">
+        <!--the contents of the scrollview arranged in a linear layout-->
+        <LinearLayout
+            android:id="@+id/page_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <!--  profile image designed circular with hdohenhof dependencies   -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ellipse" />
+            <!--  profile username using a different font family & size  -->
+            <TextView
+                android:id="@+id/profile_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/comfortaa_light"
+                android:text="@string/jane"
+                android:textAlignment="center"
+                style="@style/Dark_Textview"
+                android:textSize="26sp"/>
+            <!--  location of the user using another ont family & size -->
+            <TextView
+                android:id="@+id/user_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/san_francisco_ca"
+                android:textAlignment="center"
+                style="@style/Dark_Textview"
+                android:textSize="12sp" />
+            <!-- switch to toggle theme -->
+            <Switch
+                android:id="@+id/theme_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:checked="false"
+                android:fontFamily="@font/roboto"
+                android:text="@string/dark_mode" />
+            <!--  follow button made visible in the dark mode with stroke  -->
+            <Button
+                android:id="@+id/follow_button"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/local_black"
+                style="@style/Buttons"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/follow_me"
+                android:textColor="@color/white" />
+            <!--  a button to message user made visible in light mode with stroke  -->
+            <Button
+                android:id="@+id/message_button"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/message_me"
+                android:textColor="@color/black"
+                style="@style/Buttons"/>
+            <!--  images arranged in rows with horizontal linear layout/row1  -->
+            <LinearLayout
+                android:id="@+id/image_row_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/image_grid_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/grid_1" />
+
+                <ImageView
+                    android:id="@+id/image_grid_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/grid_2"/>
+
+                <ImageView
+                    android:id="@+id/image_grid_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/grid_3"/>
+
+            </LinearLayout>
+            <!--  images arranged in rows with horizontal linear layout/row2  -->
+            <LinearLayout
+                android:id="@+id/image_row_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/image_grid_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/grid_4" />
+
+                <ImageView
+                    android:id="@+id/image_grid_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/grid_5"/>
+
+                <ImageView
+                    android:id="@+id/image_grid_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/grid_6"
+                    tools:layout_editor_absoluteX="29dp"
+                    tools:layout_editor_absoluteY="101dp" />
+
+            </LinearLayout>
+            <!--  images arranged in rows with horizontal linear layout/row3  -->
+            <LinearLayout
+                android:id="@+id/image_row_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/image_grid_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/grid_7"/>
+
+                <ImageView
+                    android:id="@+id/image_grid_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/grid_8"/>
+
+                <ImageView
+                    android:id="@+id/image_grid_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/grid_9"/>
+
+            </LinearLayout>
+            <!--    -->
+            <Button
+                android:id="@+id/see_more"
+                android:backgroundTint="@color/white"
+                android:text="@string/see_more"
+                android:textColor="@color/black"
+                style="@style/Buttons"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

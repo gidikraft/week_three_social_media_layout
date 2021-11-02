@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="good_morning">Good morning!</string>
+    <string name="sangotedo_ajah_lg">SANGOTEDO, AJAH, LG</string>
+    <string name="jane">Jane</string>
+    <string name="san_francisco_ca">SAN FRANCISCO, CA</string>
+    <string name="follow_me">Follow me</string>
+    <string name="message_me">message me</string>
+    <string name="see_more">See More</string>
+    <string name="dark_mode">Dark Mode</string>
+</resources>
