@@ -3,7 +3,7 @@
     <style name="Theme.WeekThreeMediaLayout" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/local_black</item>
+        <item name="colorPrimaryVariant">@color/local_status_blue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -23,7 +23,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">16dp</item>
-        <item name="strokeColor">@color/local_black</item>
+        <item name="android:textColor">@color/local_white</item>
         <item name="strokeWidth">2dp</item>
     </style>
 

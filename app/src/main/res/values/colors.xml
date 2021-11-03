@@ -10,4 +10,6 @@
     <color name="local_white">#FFFFFFFF</color>
     <color name="local_black">#FF000000</color>
     <color name="local_light_stroke">#659FCD</color>
+    <color name="local_blueish">#1212AF</color>
+    <color name="local_status_blue">#1592B1</color>
 </resources>

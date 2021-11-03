@@ -110,11 +110,10 @@
             <Button
                 android:id="@+id/follow_button"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="@color/local_black"
                 style="@style/Buttons"
                 android:fontFamily="@font/roboto_medium"
-                android:text="@string/follow_me"
-                android:textColor="@color/white" />
+                android:backgroundTint="@color/local_black"
+                android:text="@string/follow_me" />
             <!--  a button to message user made visible in light mode with stroke  -->
             <Button
                 android:id="@+id/message_button"
